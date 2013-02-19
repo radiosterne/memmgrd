@@ -1,3 +1,11 @@
+/*
+ *@project memmgrtest
+ *@file main.cpp
+ *@brief Entry point for an test application. Takes up one memory block.
+ *@author Andrew Kurnoskin
+ *@date 06/01/2013
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -8,8 +16,10 @@
 #include <unistd.h>
 #include <iostream>
 
+//Definition of the socket path
 #define SOCK_PATH "/home/radiosterne/tmp/memmgrd_socket"
 
+//Message codes (copied from main project)
 enum socket_message_codes
 {
     //Normally daemon-recievable codes
@@ -33,6 +43,9 @@ enum socket_message_codes
     socket_error
 };
 
+// Just opens a connection, asks user for a size of memory block and
+// sends request to occupy it.
+// BE WARY: DOES NO CHECKING, even of socket state, use at your own risk!
 int main(void)
 {
     int s, len;
