@@ -21,7 +21,7 @@ server* server::instance;
 server::server() :
     log(0), first_node(0), mgr(0), hash(0)
 {
-    unsigned int stat = daemon(0,0);
+    daemon(0,0);
 
     //At this point, config object is constructed and the config is fetched from file,
     //so we can safely use its values
