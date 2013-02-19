@@ -1,3 +1,11 @@
+/*
+ *@project memmgrd
+ *@file logger.cpp
+ *@brief Implementation of logger class
+ *@author Andrew Kurnoskin
+ *@date 19/02/2013
+ */
+
 #include "logger.h"
 
 #include <unistd.h>

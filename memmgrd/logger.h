@@ -1,3 +1,11 @@
+/*
+ *@project memmgrd
+ *@file logger.h
+ *@brief Definition of logger class
+ *@author Andrew Kurnoskin
+ *@date 19/02/2013
+ */
+
 #ifndef LOGGER_H
 #define LOGGER_H
 
@@ -6,6 +14,11 @@
 #include <string>
 #include <fstream>
 
+/*
+ *@brief A logger facility for simple multi-threaded logging
+ *
+ *@thread Authomatically starts loop() thread after calling to create_thread(void* logr)
+ */
 class logger
 {
 public:
